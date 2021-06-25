@@ -1,22 +1,11 @@
-// changing individual properties with code and using setInterval
-var rotationSpeed = -0.05;
-var goDown = true;
+
+
+// // changing individual properties with code and using setInterval
+var rotationSpeed = 0.07;
 var myOtherBox = document.getElementById('myOtherBox');
 
-function spin(){
-	if(goDown){
-		rotationSpeed += -0.05;
-	}else{
-		rotationSpeed += 0.05;
-	}
-	if(rotationSpeed < -10){
-		goDown = false;
-	}
-	if(rotationSpeed > 10){
-		goDown = true;
-	}
-	myOtherBox.object3D.rotation.x += rotationSpeed;
-    myOtherBox.object3D.rotation.y += rotationSpeed;
+ function spin(){
+    myOtherBox.object3D.rotation.x += rotationSpeed;
 	console.log(myOtherBox.object3D.rotation.x);
 }
 
